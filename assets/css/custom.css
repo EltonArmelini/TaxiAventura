@@ -1,17 +1,48 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #25d366;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Asegura que esté sobre otros elementos */
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #20b358;
+}
+
+.whatsapp-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+
 /* Pop-Up Styles */
 .popUp-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -30%) scale(0.1);
-  visibility:  hidden;
+  visibility: hidden;
   transition: transform 0.4s, top 0.4s;
   background-color: #ffff;
   padding: 25px 20px;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif
 }
-.popUp-container h2{
+
+.popUp-container h2 {
   color: #0d6efd;
   padding: 25px 5px;
   text-align: center;
@@ -27,19 +58,19 @@
 .popUp_btn {
 
   background-color: #0073bf;
-	color: #fff;
-	border: none;
-	font-size: 13px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 12px 30px;
-	border-radius: 30px;
-	display: inline-block;
-	transition: all 0.3s;
-	outline: none;
-	box-shadow: none;
-	text-shadow: none;
-	cursor: pointer;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
   display: block;
   margin: auto;
 
@@ -81,7 +112,8 @@
   margin-right: auto;
 }
 
-.container-services h3, p {
+.container-services h3,
+p {
   text-align: center;
   margin-top: 5px;
 }
@@ -154,6 +186,37 @@
   margin: 5px;
 }
 
+
+
+/* Estilos responsivos para el boton de WhatsApp */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    font-size: 14px;
+    padding: 8px 12px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-icon {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    font-size: 13px;
+    padding: 8px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .whatsapp-icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}
+
 @media (max-width: 1100px) {
   .item-service-img {
     display: flex;
@@ -170,7 +233,8 @@
     border-radius: 5px;
   }
 
-  .text-container h3, p {
+  .text-container h3,
+  p {
     color: #000000 !important;
     padding: 10px 20px 10px 20px;
   }
